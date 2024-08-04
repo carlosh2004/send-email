@@ -7,7 +7,10 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "biome:format": "pnpm biome format --write ./src",
+    "biome:lint": "pnpm biome lint --write ./src",
+    "biome:check": "pnpm biome check --write ./src"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.1",
@@ -15,5 +18,8 @@
     "astro": "^4.13.1",
     "tailwindcss": "^3.4.7",
     "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3"
   }
 }
