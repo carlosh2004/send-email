@@ -1,0 +1,23 @@
+---
+interface NavLink {
+    name: string;
+    href: string;
+}
+const navLinks: NavLink[] = [
+    {name: "Send email", href: "/"},
+    {name: "Emails", href: "/emails"},
+];
+---
+<header class="w-full">
+    <div class="h-14 container px-4 mx-auto flex justify-center">
+        <nav class="flex items-center gap-4 text-sm lg:gap-6">
+            {
+                navLinks.map((link) => (
+                        <a class="transition-colors hover:text-foreground/80 text-foreground/60" href={link.href}>
+                            {link.name}
+                        </a>
+                ))
+            }
+        </nav>
+    </div>
+</header>
